@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/DeividVeloso/spotifyWrapper.svg?branch=master)](https://travis-ci.org/DeividVeloso/spotifyWrapper)
 
+[![Coverage Status](https://coveralls.io/repos/github/DeividVeloso/spotifyWrapper/badge.svg?branch=master)](https://coveralls.io/github/DeividVeloso/spotifyWrapper?branch=master)
+
 A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/).
 
 ## Browser Support
