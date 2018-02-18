@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spotify Wrapper Test</title>
+</head>
+
+<body>
+
+  <div id="albums"></div>
+
+  <script src="../dist/spotify-wrapper.umd.js"></script>
+
+  <script>
+    const token = 'BQDSAABwTzXYjNKLj1ZBPucxlAjdijp2xM_qmLHFpYzJAgk7qiXfB9lzFPGPM-4jPCsdIhWS-35qXBmynjMPh-G18CQ4QJXPnFb-K6HsM-WbtHvUDrIzVFFasA1qCbXVz4Eqh5i8G5gca1xCvlFhJwlF2rihjh5rnIZL_mqGg6nhSYuhS1oLMrvjeb7FplqpVsnxfd0CeYZ1dvVOVAQZ93Cusrj9MokkT68kKFyujA74uGg4kLUJRsm_r4NsolcDTLA-qN1P16PGtI15a_-ZJksMuPI';
+    const albums = spotifyWrapper.searchAlbum('Kings Of Leon', token);
+    const albumsEl = document.getElementById('albums');
+    albums.then(data => {
+      markup = data.albums.items.map(item =>
+        `<img src='${item.images[0].url}' alt='${item.name}'/>`
+      ).join('');
+
+      albumsEl.innerHTML = markup;
+    })
+
+  </script>
+</body>
+</html>

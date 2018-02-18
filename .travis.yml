@@ -1,0 +1,12 @@
+language: node_js       //Seleciona a linguagem do meu projeto
+node_js:
+  - "8"                 //Versão do node
+cache:                  //Usado para fazer o cache do node_modules
+  directories:
+    "node_modules"
+
+before_script:          //Antes de iniciar rodar o build
+  - npm run build:all
+
+after_success:          //Depois rodar o teste coverage
+  - npm run test:coverage
