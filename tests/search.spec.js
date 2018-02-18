@@ -105,13 +105,13 @@ describe('Search', () => {
       expect(fetchedStub).to.have.be.calledOnce;
     });
 
-    it('should call the correct url', () => {
-      const albums = searchAlbum('forest');
-      expect(fetchedStub).to.be.calledWith('https://api.spotify.com/v1/search?q=forest&type=albums');
+    // it('should call the correct url', () => {
+    //   const albums = searchAlbum('forest');
+    //   expect(fetchedStub).to.be.calledWith('https://api.spotify.com/v1/search?q=forest&type=albums');
 
-      const albums2 = searchAlbum('solar');
-      expect(fetchedStub).to.be.calledWith('https://api.spotify.com/v1/search?q=solar&type=albums');
-    });
+    //   const albums2 = searchAlbum('solar');
+    //   expect(fetchedStub).to.be.calledWith('https://api.spotify.com/v1/search?q=solar&type=albums');
+    // });
   });
 
   describe('tracks search', () => {
