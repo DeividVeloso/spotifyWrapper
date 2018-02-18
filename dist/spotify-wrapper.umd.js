@@ -171,34 +171,18 @@ var _search = __webpack_require__(0);
 
 var _config = __webpack_require__(1);
 
-var _utils = __webpack_require__(4);
+/* global fetch */
 
 var getAlbum = exports.getAlbum = function getAlbum(id) {
-  return fetch(_config.API_URL + 'albums/' + id).then(_utils.toJSON);
-}; /* global fetch */
+  return fetch(_config.API_URL + 'albums/' + id).then(toJSON);
+};
 
 var getAlbums = exports.getAlbums = function getAlbums(ids) {
-  return fetch(_config.API_URL + 'albums/?ids=' + ids).then(_utils.toJSON);
+  return fetch(_config.API_URL + 'albums/?ids=' + ids).then(toJSON);
 };
 
 var getAlbumTracks = exports.getAlbumTracks = function getAlbumTracks(id) {
-  return fetch(_config.API_URL + 'albums/' + id + '/tracks').then(_utils.toJSON);
-};
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var toJSON = exports.toJSON = function toJSON(data) {
-  return data.then(function (json) {
-    return json.toJson();
-  });
+  return fetch(_config.API_URL + 'albums/' + id + '/tracks').then(toJSON);
 };
 
 /***/ })
